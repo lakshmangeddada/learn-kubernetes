@@ -1,4 +1,12 @@
 apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: cart
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::739561048503:role/ssm-for-eks
+
+---
+apiVersion: v1
 kind: Pod
 metadata:
   name: cart
@@ -26,11 +34,4 @@ spec:
       port: 8080
       targetPort: 8080
 ---
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: cart
-  annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::739561048503:role/ssm-for-eks
-
 
