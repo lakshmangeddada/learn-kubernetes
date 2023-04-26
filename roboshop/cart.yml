@@ -32,6 +32,5 @@ metadata:
   name: cart
   annotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::739561048503:role/ssm-for-eks
-spec:
-  serviceAccountName: cart
+
 
